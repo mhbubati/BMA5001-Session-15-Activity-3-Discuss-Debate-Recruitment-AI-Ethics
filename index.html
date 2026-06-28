@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recruitment & AI Ethics – Discussion Activity</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            background: #fafbfc;
+            color: #1a1a2e;
+            padding: 30px 40px;
+            line-height: 1.6;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .header {
+            border-bottom: 4px solid #003366;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+
+        .header .module-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #003366;
+            letter-spacing: 0.3px;
+        }
+
+        .header .session-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #003366;
+            margin-top: 2px;
+        }
+
+        .header .activity-type {
+            font-size: 15px;
+            color: #555;
+            margin-top: 2px;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #003366;
+            margin-bottom: 4px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+            border-left: 4px solid #003366;
+            padding-left: 16px;
+            background: #f5f7fa;
+            padding: 12px 18px;
+            border-radius: 4px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #003366;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #e0e7ee;
+            padding-bottom: 6px;
+        }
+
+        h3 {
+            font-size: 20px;
+            color: #1a3a5c;
+            margin-top: 20px;
+            margin-bottom: 6px;
+        }
+
+        p {
+            margin-bottom: 14px;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        ul, ol {
+            margin: 10px 0 15px 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background: #f0f7ff;
+            border-left: 5px solid #003366;
+            padding: 16px 20px;
+            margin: 18px 0;
+            border-radius: 4px;
+            font-size: 17px;
+        }
+
+        .highlight-box strong {
+            color: #003366;
+        }
+
+        .stakeholder-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0 20px;
+        }
+
+        .stakeholder-card {
+            background: #f5f7fa;
+            border-radius: 10px;
+            padding: 14px 16px;
+            border-left: 4px solid #003366;
+        }
+
+        .stakeholder-card .name {
+            font-weight: 700;
+            color: #003366;
+            font-size: 16px;
+        }
+
+        .stakeholder-card .quote {
+            font-style: italic;
+            color: #1a3a5c;
+            font-size: 15px;
+            margin-top: 4px;
+        }
+
+        .quote-box {
+            background: #f5f7fa;
+            border-left: 5px solid #2ECC71;
+            padding: 16px 22px;
+            margin: 18px 0;
+            border-radius: 4px;
+            font-style: italic;
+            color: #1a3a5c;
+            font-size: 17px;
+        }
+
+        .quote-box .source {
+            font-style: normal;
+            font-weight: 600;
+            margin-top: 6px;
+            color: #003366;
+        }
+
+        .key-takeaway {
+            background: #e8f8f0;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 18px 0;
+            border-left: 5px solid #2ECC71;
+        }
+
+        .key-takeaway strong {
+            color: #1a7a4a;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 18px 0 22px;
+            font-size: 16px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+        }
+
+        th {
+            background: #003366;
+            color: white;
+            padding: 12px 14px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px 14px;
+            border-bottom: 1px solid #e0e7ee;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .footer {
+            margin-top: 45px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e7ee;
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+        }
+
+        .footer .module-code {
+            font-weight: 700;
+            color: #003366;
+        }
+
+        .footer .divider {
+            color: #ccc;
+            padding: 0 8px;
+        }
+
+        @media print {
+            body {
+                padding: 25px 30px;
+                background: white;
+            }
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 18px;
+            }
+            h1 {
+                font-size: 26px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+            p, li {
+                font-size: 15px;
+            }
+            table {
+                font-size: 14px;
+                display: block;
+                overflow-x: auto;
+            }
+            th, td {
+                padding: 8px 10px;
+            }
+            .stakeholder-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================ -->
+    <!-- HEADER -->
+    <!-- ============================================================ -->
+
+    <div class="header">
+        <div class="module-name">Innovation Management - BMA5001</div>
+        <div class="session-title">Session 15: AI in Innovation Management</div>
+        <div class="activity-type">Activity Three – Discussion & Debate</div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- TITLE -->
+    <!-- ============================================================ -->
+
+    <h1>🤖 Recruitment & AI Ethics</h1>
+    <div class="subtitle">A Discussion Activity on Responsible AI in Innovation Management</div>
+
+    <!-- ============================================================ -->
+    <!-- INTRODUCTION -->
+    <!-- ============================================================ -->
+
+    <h2>📖 Introduction</h2>
+
+    <p>
+        In this activity, you will explore one of the most challenging ethical dilemmas in AI-driven innovation:
+        <strong>fairness in recruitment</strong>.
+    </p>
+
+    <p>
+        A large company has developed an AI system to shortlist job applicants. The system saves <strong>300 hours</strong>
+        of HR time per recruitment cycle and identifies candidates with strong potential. However, an internal audit reveals
+        that the system <strong>consistently rejects qualified candidates</strong> from certain ethnic and socioeconomic
+        backgrounds.
+    </p>
+
+    <div class="key-takeaway">
+        <strong>🎯 The Core Question:</strong> Should the company deploy this AI, and if so, how?
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- STAKEHOLDERS -->
+    <!-- ============================================================ -->
+
+    <h2>👥 The Stakeholders</h2>
+
+    <p>
+        Each stakeholder has a different perspective on this issue. Your group must consider all of them before making a decision.
+    </p>
+
+    <div class="stakeholder-grid">
+        <div class="stakeholder-card">
+            <div class="name">HR Director 👔</div>
+            <div class="quote">"We save 300 hours per recruitment cycle. We cannot afford to go back to manual screening."</div>
+        </div>
+        <div class="stakeholder-card">
+            <div class="name">Diversity Officer 🌍</div>
+            <div class="quote">"This system is systematically discriminating against certain groups. It must be stopped."</div>
+        </div>
+        <div class="stakeholder-card">
+            <div class="name">AI Developer 🧠</div>
+            <div class="quote">"The algorithm is not biased — it is reflecting historical patterns in our hiring data."</div>
+        </div>
+        <div class="stakeholder-card">
+            <div class="name">Rejected Candidate 🙋</div>
+            <div class="quote">"I was qualified. How do I know the AI did not reject me unfairly?"</div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- GROUP TASK -->
+    <!-- ============================================================ -->
+
+    <h2>🧪 Your Task – Group Work</h2>
+
+    <p><strong>Format:</strong> Groups of 3–4 students</p>
+
+    <h3>Step 1 – Read and Discuss</h3>
+
+    <p>In your group, discuss the following questions:</p>
+
+    <ol>
+        <li>
+            <strong>What is the benefit of using AI in this scenario?</strong>
+            <ul>
+                <li>Efficiency gains (300 hours saved)</li>
+                <li>Identifying strong candidates</li>
+                <li>Potential to reduce human bias</li>
+            </ul>
+        </li>
+        <li>
+            <strong>What is the risk?</strong>
+            <ul>
+                <li>Systematic discrimination against certain groups</li>
+                <li>Lack of transparency</li>
+                <li>Legal and reputational consequences</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Who are the stakeholders and what do they want?</strong>
+            <ul>
+                <li>HR Director: Efficiency</li>
+                <li>Diversity Officer: Fairness</li>
+                <li>AI Developer: Protect their work</li>
+                <li>Rejected Candidate: Accountability and transparency</li>
+            </ul>
+        </li>
+        <li>
+            <strong>What safeguards could be put in place?</strong>
+            <ul>
+                <li>Regular bias audits</li>
+                <li>Transparency in how the AI makes decisions</li>
+                <li>Human oversight of AI decisions</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>Step 2 – Make Your Decision</h3>
+
+    <p>Your tribunal must decide:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Decision</th>
+                <th>What It Means</th>
+                <th>Your Choice</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>✅ Approve</strong></td>
+                <td>Deploy the AI as proposed</td>
+                <td>☐</td>
+            </tr>
+            <tr>
+                <td><strong>⚠️ Approve with Conditions</strong></td>
+                <td>Deploy the AI with specific safeguards</td>
+                <td>☐</td>
+            </tr>
+            <tr>
+                <td><strong>❌ Reject</strong></td>
+                <td>Do not use the AI for recruitment</td>
+                <td>☐</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>
+        <strong>Write a short justification</strong> for your decision. Include:
+    </p>
+    <ul>
+        <li>Why you made this choice</li>
+        <li>What safeguards you would put in place (if any)</li>
+        <li>How you would address stakeholder concerns</li>
+    </ul>
+
+    <!-- ============================================================ -->
+    <!-- BONUS ACTIVITY -->
+    <!-- ============================================================ -->
+
+    <h2>🏆 Bonus Activity: The Innovation Manager's Dilemma</h2>
+
+    <div class="highlight-box">
+        <strong>Task:</strong> Imagine you are the <strong>Innovation Manager</strong> at the company. You know the AI has
+        bias issues, but the HR Director is pressuring you to deploy it.
+    </div>
+
+    <p>
+        Write a <strong>1-minute pitch</strong> to the CEO explaining:
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Element</th>
+                <th>What to Include</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>The Problem</strong></td>
+                <td>What the AI does and why it is valuable</td>
+            </tr>
+            <tr>
+                <td><strong>The Risk</strong></td>
+                <td>What the bias issue is and why it matters</td>
+            </tr>
+            <tr>
+                <td><strong>The Solution</strong></td>
+                <td>What safeguards you would put in place</td>
+            </tr>
+            <tr>
+                <td><strong>The Ask</strong></td>
+                <td>What you need from the CEO to proceed responsibly</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="quote-box">
+        "AI is a means, not an end. Be clear on what end you're trying to achieve."
+        <div class="source">– Alfredo Colas, SVP IT North America, P&amp;G</div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- CLASS DISCUSSION -->
+    <!-- ============================================================ -->
+
+    <h2>🗣️ Class Discussion</h2>
+
+    <p>After the group work, we will discuss as a class:</p>
+
+    <ul>
+        <li><em>"What was the most difficult part of this decision?"</em></li>
+        <li><em>"Should companies be allowed to use AI that is 'mostly' fair but sometimes biased?"</em></li>
+        <li><em>"Who should be accountable when AI causes harm?"</em></li>
+        <li><em>"Is it ever acceptable to reject an AI application entirely?"</em></li>
+    </ul>
+
+    <!-- ============================================================ -->
+    <!-- KEY LESSONS -->
+    <!-- ============================================================ -->
+
+    <h2>🔑 Key Takeaways</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Lesson</th>
+                <th>Why It Matters</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Efficiency is not enough</strong></td>
+                <td>AI must also be ethical and fair</td>
+            </tr>
+            <tr>
+                <td><strong>Bias can be hidden</strong></td>
+                <td>AI may reflect historical patterns that are themselves biased</td>
+            </tr>
+            <tr>
+                <td><strong>Transparency is essential</strong></td>
+                <td>Stakeholders must understand how decisions are made</td>
+            </tr>
+            <tr>
+                <td><strong>Accountability matters</strong></td>
+                <td>Someone must be responsible for AI decisions</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ============================================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================================ -->
+
+    <div class="footer">
+        <p>
+            <span class="module-code">BMA5001</span>
+            <span class="divider">|</span>
+            Innovation Management
+            <span class="divider">|</span>
+            Session 15: AI in Innovation Management
+        </p>
+        <p style="margin-top: 6px; font-size: 13px;">
+            📄 Activity Three – Discussion & Debate
+        </p>
+    </div>
+
+</body>
+</html>
